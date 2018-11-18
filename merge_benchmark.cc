@@ -2,7 +2,7 @@
 
 #include <algorithm>
 #include <cstdint>
-#include <forward_list>
+#include <map>
 #include <random>
 #include <set>
 
@@ -11,47 +11,78 @@
 
 namespace {
 
-constexpr std::size_t kProblemSize = 1000u;
-constexpr std::size_t kStep = 1;
-constexpr std::size_t kMaxIdx = kProblemSize;
+constexpr bool kOnlyLastBigStep = false;
+constexpr std::size_t kBigStep = 40;
 
-const std::vector<std::int64_t>& ints_test() {
-  static const auto res = [] () -> std::vector<std::int64_t> {
-    std::mt19937 g;
-    std::uniform_int_distribution<std::int64_t> dis(
-        1, static_cast<std::int64_t>(kProblemSize) * 10);
+constexpr std::size_t kProblemSize = 2000u;
+constexpr std::size_t kStep = kOnlyLastBigStep ? 1 : kBigStep;
+constexpr std::size_t kMaxRhsSize = kOnlyLastBigStep ? kBigStep : kProblemSize;
 
-    std::set<std::int64_t> unique_sorted_ints;
-    while (unique_sorted_ints.size() < kProblemSize)
-      unique_sorted_ints.insert(dis(g));
+void set_benchmark_input_sizes(benchmark::internal::Benchmark* bench) {
+  std::size_t lhs_size = kProblemSize;
+  std::size_t rhs_size = 0;
 
-    return {unique_sorted_ints.begin(), unique_sorted_ints.end()};
-  }();
+  do {
+    bench->Args({static_cast<int>(lhs_size), static_cast<int>(rhs_size)});
+    lhs_size -= kStep;
+    rhs_size += kStep;
+  } while (rhs_size <= kProblemSize);
+}
 
+using test_type = std::int64_t;
+using test_type_vec = std::vector<test_type>;
+using test_merge_input = std::pair<test_type_vec, test_type_vec>;
+
+test_type random_test_type_value() {
+  static std::mt19937 g;
+  static std::uniform_int_distribution<> dis(1, int(kProblemSize) * 100);
+  return dis(g);
+}
+
+test_type_vec random_test_type_sorted_vec(std::size_t size) {
+  test_type_vec res(size);
+  std::generate(res.begin(), res.end(), random_test_type_value);
   return res;
 }
 
-void set_looking_for_index(benchmark::internal::Benchmark* bench) {
-  for (std::size_t looking_for_idx = 0; looking_for_idx < kMaxIdx; looking_for_idx += kStep)
-    bench->Arg(static_cast<int>(looking_for_idx));
+const test_merge_input& input_data(std::size_t lhs_size, std::size_t rhs_size) {
+  // Cache makes sence if we would want to call this function multiple times for
+  // the same input. Don't think it's a fantastic idea though because having
+  // multiple benchmarks might screw up code alignment.
+  static std::map<std::pair<std::size_t, std::size_t>, test_merge_input> cache;
+
+  auto in_cache = cache.find({lhs_size, rhs_size});
+  if (in_cache != cache.end()) return in_cache->second;
+
+  return cache
+      .insert({{lhs_size, rhs_size},
+               {random_test_type_sorted_vec(lhs_size),
+                random_test_type_sorted_vec(rhs_size)}})
+      .first->second;
 }
 
-struct binary {
-  template <typename I, typename V>
-  I operator()(I f, I l, const V& v) {
-    return std::lower_bound(f, l, v);
+struct std_merge {
+  template <typename I1, typename I2, typename O>
+  O operator()(I1 f1, I1 l1, I2 f2, I2 l2, O o) {
+    return std::merge(f1, l1, f2, l2, o);
   }
 };
 
 }  // namespace
 
-template <typename Searcher>
-void benchmark_search(benchmark::State& state) {
-  auto input = ints_test();
-  auto looking_for = input[static_cast<std::size_t>(state.range(0))];
+template <typename Merger>
+void benchmark_merge(benchmark::State& state) {
+  const size_t lhs_size = static_cast<size_t>(state.range(0));
+  const size_t rhs_size = static_cast<size_t>(state.range(1));
 
-  for (auto _ : state)
-    benchmark::DoNotOptimize(Searcher{}(input.begin(), input.end(), looking_for));
+  const test_merge_input& input = input_data(lhs_size, rhs_size);
+  for (auto _ : state) {
+    test_type_vec res(lhs_size + rhs_size);
+    benchmark::DoNotOptimize(Merger{}(input.first.begin(), input.first.end(),
+                                      input.second.begin(), input.second.end(),
+                                      res.begin()));
+  }
 }
 
-BENCHMARK_TEMPLATE(benchmark_search, binary)->Apply(set_looking_for_index);
+BENCHMARK_TEMPLATE(benchmark_merge, std_merge)
+    ->Apply(set_benchmark_input_sizes);
