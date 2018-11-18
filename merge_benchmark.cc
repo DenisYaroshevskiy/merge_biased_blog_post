@@ -11,12 +11,12 @@
 
 namespace {
 
-constexpr bool kOnlyLastBigStep = false;
-constexpr std::size_t kBigStep = 40;
+constexpr bool kOnlyLastElements = false;
+constexpr std::size_t kBigStep = 20;
 
 constexpr std::size_t kProblemSize = 2000u;
-constexpr std::size_t kStep = kOnlyLastBigStep ? 1 : kBigStep;
-constexpr std::size_t kMaxRhsSize = kOnlyLastBigStep ? kBigStep : kProblemSize;
+constexpr std::size_t kStep = kOnlyLastElements ? 1 : kBigStep;
+constexpr std::size_t kMaxRhsSize = kOnlyLastElements ? kBigStep * 2 : kProblemSize;
 
 void set_benchmark_input_sizes(benchmark::internal::Benchmark* bench) {
   std::size_t lhs_size = kProblemSize;
@@ -42,6 +42,7 @@ test_type random_test_type_value() {
 test_type_vec random_test_type_sorted_vec(std::size_t size) {
   test_type_vec res(size);
   std::generate(res.begin(), res.end(), random_test_type_value);
+  std::sort(res.begin(), res.end());
   return res;
 }
 
@@ -64,7 +65,7 @@ const test_merge_input& input_data(std::size_t lhs_size, std::size_t rhs_size) {
 struct std_merge {
   template <typename I1, typename I2, typename O>
   O operator()(I1 f1, I1 l1, I2 f2, I2 l2, O o) {
-    return std::merge(f1, l1, f2, l2, o);
+    return std::set_union(f1, l1, f2, l2, o);
   }
 };
 
