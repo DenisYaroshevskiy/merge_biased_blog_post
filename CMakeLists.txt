@@ -1,28 +1,25 @@
 cmake_minimum_required(VERSION 3.7)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-set(CMAKE_CXX_STANDARD 14)
 
-set(CMAKE_CXX_FLAGS_DEBUG "-O1 -fno-omit-frame-pointer -g -fsanitize=address -Wall -Wextra -Werror")
-set(CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall -Wextra -Werror -g")
-
-project(partition_point_biased_blog_post)
+project(merge_biased_blog_post)
 
 include_directories(./)
 
-set(HEADER_FILE
-    third_party/catch.h
-    other_algorithms.h
-    ../partition_point_biased_blog_post/result.h
-    result.h
-   )
-set(TEST_SOURCE_FILES
-    other_algorithms_test.cc
-    third_party/main_catch.cc)
-set(BENCHMARK_SOURCE_FILES
-    merge_benchmark.cc
-    third_party/google_benchmark_main.cc)
+add_compile_options(-Wall -Wextra -Werror -Wpedantic -g)
 
-add_executable(test ${TEST_SOURCE_FILES})
-add_executable(benchmarks ${BENCHMARK_SOURCE_FILES})
+add_executable(test)
+target_sources(test PRIVATE
+               other_algorithms_test.cc
+               third_party/main_catch.cc)
+set_property(TARGET test PROPERTY CXX_STANDARD 14)
+target_compile_options(test PRIVATE -O1 -fno-omit-frame-pointer -g -fsanitize=address)
+target_link_libraries(test PRIVATE -fsanitize=address)
+
+add_executable(benchmarks)
+target_sources(benchmarks PRIVATE
+               merge_benchmark.cc
+               third_party/google_benchmark_main.cc)
+set_property(TARGET benchmarks PROPERTY CXX_STANDARD 17)
+target_compile_options(benchmarks PRIVATE -O3)
 target_link_libraries(benchmarks benchmark)

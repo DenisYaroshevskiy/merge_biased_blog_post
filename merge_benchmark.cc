@@ -7,16 +7,19 @@
 #include <set>
 
 #include "../partition_point_biased_blog_post/result.h"
+#include "other_algorithms.h"
 #include "result.h"
 
 namespace {
 
+constexpr bool kRelease = false;
 constexpr bool kOnlyLastElements = false;
 constexpr std::size_t kBigStep = 20;
 
 constexpr std::size_t kProblemSize = 2000u;
-constexpr std::size_t kStep = kOnlyLastElements ? 1 : kBigStep;
-constexpr std::size_t kMaxRhsSize = kOnlyLastElements ? kBigStep * 2 : kProblemSize;
+constexpr std::size_t kStep = (kOnlyLastElements || kRelease) ? 1 : kBigStep;
+constexpr std::size_t kMaxRhsSize =
+    kOnlyLastElements ? kBigStep * 2 : kProblemSize;
 
 void set_benchmark_input_sizes(benchmark::internal::Benchmark* bench) {
   std::size_t lhs_size = kProblemSize;
@@ -26,7 +29,7 @@ void set_benchmark_input_sizes(benchmark::internal::Benchmark* bench) {
     bench->Args({static_cast<int>(lhs_size), static_cast<int>(rhs_size)});
     lhs_size -= kStep;
     rhs_size += kStep;
-  } while (rhs_size <= kProblemSize);
+  } while (rhs_size <= kMaxRhsSize);
 }
 
 using test_type = std::int64_t;
@@ -65,7 +68,28 @@ const test_merge_input& input_data(std::size_t lhs_size, std::size_t rhs_size) {
 struct std_merge {
   template <typename I1, typename I2, typename O>
   O operator()(I1 f1, I1 l1, I2 f2, I2 l2, O o) {
-    return std::set_union(f1, l1, f2, l2, o);
+    return std::merge(f1, l1, f2, l2, o);
+  }
+};
+
+struct libstd_merge {
+  template <typename I1, typename I2, typename O>
+  O operator()(I1 f1, I1 l1, I2 f2, I2 l2, O o) {
+    return srt::libstd::merge(f1, l1, f2, l2, o, std::less<>{});
+  }
+};
+
+struct merge_v1 {
+  template <typename I1, typename I2, typename O>
+  O operator()(I1 f1, I1 l1, I2 f2, I2 l2, O o) {
+    return srt::v1::merge(f1, l1, f2, l2, o, std::less<>{});
+  }
+};
+
+struct merge_v2 {
+  template <typename I1, typename I2, typename O>
+  O operator()(I1 f1, I1 l1, I2 f2, I2 l2, O o) {
+    return srt::v2::merge(f1, l1, f2, l2, o, std::less<>{});
   }
 };
 
@@ -79,11 +103,11 @@ void benchmark_merge(benchmark::State& state) {
   const test_merge_input& input = input_data(lhs_size, rhs_size);
   for (auto _ : state) {
     test_type_vec res(lhs_size + rhs_size);
-    benchmark::DoNotOptimize(Merger{}(input.first.begin(), input.first.end(),
+    Merger{}(input.first.begin(), input.first.end(),
                                       input.second.begin(), input.second.end(),
-                                      res.begin()));
+                                      res.begin());
   }
 }
 
-BENCHMARK_TEMPLATE(benchmark_merge, std_merge)
+BENCHMARK_TEMPLATE(benchmark_merge, merge_v1)
     ->Apply(set_benchmark_input_sizes);

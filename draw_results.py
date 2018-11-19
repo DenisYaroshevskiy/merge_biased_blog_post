@@ -9,25 +9,27 @@ def generateMapOfStyles():
         name = 'std_merge',
         line = dict(width = 3, dash = 'dash', color = 'rgb(100, 100, 0)')
     )
-    '''
-    styles['benchmark_search<binary>'] = dict(
-        mode = 'lines',
-        name = 'binary_search',
-        line = dict(width = 3, dash = 'dot', color = 'rgb(100, 000, 100)')
-    )
 
-    styles['benchmark_search<biased_v1>'] = dict(
+
+    styles['benchmark_merge<merge_v1>'] = dict(
         mode = 'lines',
-        name = 'biased_v1',
+        name = 'merge_v1',
         line = dict(width = 3, dash = 'solid', color = 'rgb(000, 100, 100)')
     )
 
-    styles['benchmark_search<linear_with_sentinel>'] = dict(
+    styles['benchmark_merge<merge_v2>'] = dict(
+        mode = 'lines',
+        name = 'merge_v2',
+        line = dict(width = 3, dash = 'dot', color = 'rgb(100, 000, 100)')
+    )
+
+    styles['benchmark_merge<libstd_merge>'] = dict(
         mode = 'lines',
         name = 'linear_with_sentinel',
         line = dict(width = 3, dash = 'dashdot', color = 'rgb(200, 200, 000)')
     )
 
+    '''
     styles['benchmark_search<biased_final>'] = dict(
         mode = 'lines',
         name = 'biased_final',
