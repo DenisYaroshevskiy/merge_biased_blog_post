@@ -29,26 +29,29 @@ def generateMapOfStyles():
         line = dict(width = 3, dash = 'dashdot', color = 'rgb(200, 200, 000)')
     )
 
-    '''
-    styles['benchmark_search<biased_final>'] = dict(
+    styles['benchmark_merge<merge_v3>'] = dict(
         mode = 'lines',
-        name = 'biased_final',
+        name = 'merge_v3',
         line = dict(width = 3, dash = 'solid', color = 'rgb(000, 153, 076)')
     )
 
-
-    styles['benchmark_search<biased_expensive_cmp>'] = dict(
+    styles['benchmark_merge<merge_v4>'] = dict(
         mode = 'lines',
-        name = 'biased_expensive_cmp',
+        name = 'merge_v4',
         line = dict(width = 3, dash = 'solid', color = 'rgb(153, 000, 076)')
     )
 
-    styles['benchmark_search<using_unsigned>'] = dict(
+    styles['benchmark_merge<merge_v5>'] = dict(
         mode = 'lines',
-        name = 'using_unsigned',
-        line = dict(width = 3, dash = 'solid', color = 'rgb(000, 153, 076)')
+        name = 'merge_v5',
+        line = dict(width = 3, dash = 'dashdot', color = 'rgb(200, 200, 000)')
     )
-    '''
+
+    styles['benchmark_merge<merge_v6>'] = dict(
+        mode = 'lines',
+        name = 'merge_v6',
+        line = dict(width = 3, dash = 'dash', color = 'rgb(100, 100, 0)')
+    )
 
     return styles
 

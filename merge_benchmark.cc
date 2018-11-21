@@ -92,6 +92,34 @@ struct merge_v2 {
   }
 };
 
+struct merge_v3 {
+  template <typename I1, typename I2, typename O>
+  O operator()(I1 f1, I1 l1, I2 f2, I2 l2, O o) {
+    return srt::v3::merge(f1, l1, f2, l2, o, std::less<>{});
+  }
+};
+
+struct merge_v4 {
+  template <typename I1, typename I2, typename O>
+  O operator()(I1 f1, I1 l1, I2 f2, I2 l2, O o) {
+    return srt::v4::merge(f1, l1, f2, l2, o, std::less<>{});
+  }
+};
+
+struct merge_v5 {
+  template <typename I1, typename I2, typename O>
+  O operator()(I1 f1, I1 l1, I2 f2, I2 l2, O o) {
+    return srt::v5::merge(f1, l1, f2, l2, o, std::less<>{});
+  }
+};
+
+struct merge_v6 {
+  template <typename I1, typename I2, typename O>
+  O operator()(I1 f1, I1 l1, I2 f2, I2 l2, O o) {
+    return srt::v6::merge(f1, l1, f2, l2, o, std::less<>{});
+  }
+};
+
 }  // namespace
 
 template <typename Merger>
@@ -108,5 +136,5 @@ void benchmark_merge(benchmark::State& state) {
   }
 }
 
-BENCHMARK_TEMPLATE(benchmark_merge, std_merge)
+BENCHMARK_TEMPLATE(benchmark_merge, merge_v6)
     ->Apply(set_benchmark_input_sizes);
