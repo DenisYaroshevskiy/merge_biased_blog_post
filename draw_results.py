@@ -53,6 +53,18 @@ def generateMapOfStyles():
         line = dict(width = 3, dash = 'dash', color = 'rgb(100, 100, 0)')
     )
 
+    styles['benchmark_merge<merge_v7>'] = dict(
+        mode = 'lines',
+        name = 'merge_v7',
+        line = dict(width = 3, dash = 'dot', color = 'rgb(150, 000, 100)')
+    )
+
+    styles['benchmark_merge<merge_v8>'] = dict(
+        mode = 'lines',
+        name = 'merge_v8',
+        line = dict(width = 3, dash = 'solid', color = 'rgb(0, 0, 0)')
+    )
+
     return styles
 
 class parsedBenchmark:

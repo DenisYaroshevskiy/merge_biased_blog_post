@@ -128,7 +128,10 @@ const std::vector<int>& test_data() {
 
 template <typename Merger>
 void special_cases(Merger merger) {
-  run_plain_test(std::vector<int>{1, 1, 1, 1, 3, 3, 3, 3}, std::vector<int>{3}, merger);
+  std::vector<int> lhs(1, 100);
+  std::fill(lhs.begin() + 30, lhs.end(), 3);
+  std::vector<int> rhs{3};
+  run_plain_test(lhs, rhs, merger);
 }
 
 template <typename Merger>
@@ -218,5 +221,17 @@ TEST_CASE("merge_v5") {
 TEST_CASE("merge_v6") {
   test_merge([](auto f1, auto l1, auto f2, auto l2, auto o) {
     return srt::v6::merge(f1, l1, f2, l2, o, stability_less{});
+  });
+}
+
+TEST_CASE("merge_v7") {
+  test_merge([](auto f1, auto l1, auto f2, auto l2, auto o) {
+    return srt::v7::merge(f1, l1, f2, l2, o, stability_less{});
+  });
+}
+
+TEST_CASE("merge_v8") {
+  test_merge([](auto f1, auto l1, auto f2, auto l2, auto o) {
+    return srt::v8::merge(f1, l1, f2, l2, o, stability_less{});
   });
 }
