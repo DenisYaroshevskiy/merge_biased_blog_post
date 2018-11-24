@@ -81,11 +81,9 @@ O merge(I1 f1, I1 l1, I2 f2, I2 l2, O o, P p) {
 
   while (true) {
     if (p(*f2, *f1)) {
-      *o++ = *f2++;
-      if (f2 == l2) goto copyFirst;
+      *o++ = *f2++; if (f2 == l2) goto copyFirst;
     } else {
-      *o++ = *f1++;
-      if (f1 == l1) goto copySecond;
+      *o++ = *f1++; if (f1 == l1) goto copySecond;
     }
   }
 

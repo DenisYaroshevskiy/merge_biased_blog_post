@@ -7,7 +7,7 @@ def generateMapOfStyles():
 
     styles['benchmark_merge<upper_bound_based_merge>'] = dict(
         mode = 'lines',
-        name = 'upper_bound_based_merge',
+        name = 'upper_bound',
         line = dict(width = 3, dash = 'solid', color = 'rgb(000, 100, 100)')
     )
 
@@ -25,7 +25,7 @@ def generateMapOfStyles():
 
     styles['benchmark_merge<merge_v2>'] = dict(
         mode = 'lines',
-        name = 'merge_v2',
+        name = 'boundary_checks',
         line = dict(width = 3, dash = 'dot', color = 'rgb(100, 000, 100)')
     )
 
@@ -133,13 +133,13 @@ class runner:
 
         maxRhsSize = self.benchmarks[0].xs[-1]
 
-        if maxRhsSize == 40:
-            layout['title'] = 'First 40 elements'
-        else:
-            layout['title'] = 'Total range'
+        #if maxRhsSize == 40:
+        #    layout['title'] = 'First 40 elements'
+        #else:
+        #    layout['title'] = 'Total range'
 
 
-        layout['xaxis'] = dict(title = 'distance(f, result)')
+        layout['xaxis'] = dict(title = 'distance(f, result)', dtick = maxRhsSize / 10)
         layout['yaxis'] = dict(title = 'ns')
 
         self.layout = layout
