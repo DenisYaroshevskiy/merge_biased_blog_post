@@ -165,7 +165,7 @@ while(true) {
     *o++ = *f1++; if (f1 == l1) goto copySecond;
     goto nextCheck;
   takeSecond:
-    *o++ = *f2++;  if (f2 == l2) goto copyFirst;
+    *o++ = *f2++; if (f2 == l2) goto copyFirst;
   nextCheck:
     if (p(*f2, *f1)) goto takeSecond;
     *o++ = *f1++; if (f1 == l1) goto copySecond;

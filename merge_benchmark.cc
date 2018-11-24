@@ -157,5 +157,5 @@ void benchmark_merge(benchmark::State& state) {
   }
 }
 
-BENCHMARK_TEMPLATE(benchmark_merge, merge_v2)
+BENCHMARK_TEMPLATE(benchmark_merge, merge_v3)
     ->Apply(set_benchmark_input_sizes);

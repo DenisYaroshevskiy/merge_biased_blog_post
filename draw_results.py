@@ -31,25 +31,25 @@ def generateMapOfStyles():
 
     styles['benchmark_merge<libstd_merge>'] = dict(
         mode = 'lines',
-        name = 'linear_with_sentinel',
+        name = 'libstd_merge',
         line = dict(width = 3, dash = 'dashdot', color = 'rgb(200, 200, 000)')
     )
 
     styles['benchmark_merge<merge_v3>'] = dict(
         mode = 'lines',
-        name = 'merge_v3',
+        name = 'no_unrolling_same_merge',
         line = dict(width = 3, dash = 'solid', color = 'rgb(000, 153, 076)')
     )
 
     styles['benchmark_merge<merge_v4>'] = dict(
         mode = 'lines',
-        name = 'merge_v4',
+        name = 'compiler',
         line = dict(width = 3, dash = 'solid', color = 'rgb(153, 000, 076)')
     )
 
     styles['benchmark_merge<merge_v5>'] = dict(
         mode = 'lines',
-        name = 'merge_v5',
+        name = 'unrolled',
         line = dict(width = 3, dash = 'dashdot', color = 'rgb(200, 200, 000)')
     )
 

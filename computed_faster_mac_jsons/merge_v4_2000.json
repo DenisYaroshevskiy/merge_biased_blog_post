@@ -1,0 +1,948 @@
+{
+  "context": {
+    "date": "2018-11-24 22:33:43",
+    "executable": "./benchmarks",
+    "num_cpus": 8,
+    "mhz_per_cpu": 2800,
+    "cpu_scaling_enabled": false,
+    "caches": [
+      {
+        "type": "Data",
+        "level": 1,
+        "size": 32768000,
+        "num_sharing": 2
+      },
+      {
+        "type": "Instruction",
+        "level": 1,
+        "size": 32768000,
+        "num_sharing": 2
+      },
+      {
+        "type": "Unified",
+        "level": 2,
+        "size": 262144000,
+        "num_sharing": 2
+      },
+      {
+        "type": "Unified",
+        "level": 3,
+        "size": 6291456000,
+        "num_sharing": 8
+      }
+    ],
+    "load_avg": [1.18701,1.22803,1.18262],
+    "library_build_type": "release"
+  },
+  "benchmarks": [
+    {
+      "name": "benchmark_merge<merge_v4>/2000/0",
+      "run_name": "benchmark_merge<merge_v4>/2000/0",
+      "run_type": "iteration",
+      "iterations": 1252550,
+      "real_time": 5.3677653185902784e+02,
+      "cpu_time": 5.3637459582451800e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1980/20",
+      "run_name": "benchmark_merge<merge_v4>/1980/20",
+      "run_type": "iteration",
+      "iterations": 598577,
+      "real_time": 1.1166229390517444e+03,
+      "cpu_time": 1.1165297029454857e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1960/40",
+      "run_name": "benchmark_merge<merge_v4>/1960/40",
+      "run_type": "iteration",
+      "iterations": 603938,
+      "real_time": 1.1297737334422757e+03,
+      "cpu_time": 1.1296391351430113e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1940/60",
+      "run_name": "benchmark_merge<merge_v4>/1940/60",
+      "run_type": "iteration",
+      "iterations": 583737,
+      "real_time": 1.1604712996518742e+03,
+      "cpu_time": 1.1604215597092527e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1920/80",
+      "run_name": "benchmark_merge<merge_v4>/1920/80",
+      "run_type": "iteration",
+      "iterations": 575114,
+      "real_time": 1.1977128325480398e+03,
+      "cpu_time": 1.1975712641319810e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1900/100",
+      "run_name": "benchmark_merge<merge_v4>/1900/100",
+      "run_type": "iteration",
+      "iterations": 571620,
+      "real_time": 1.1985685647881112e+03,
+      "cpu_time": 1.1984815086945882e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1880/120",
+      "run_name": "benchmark_merge<merge_v4>/1880/120",
+      "run_type": "iteration",
+      "iterations": 554521,
+      "real_time": 1.2194801549925792e+03,
+      "cpu_time": 1.2190773658707258e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1860/140",
+      "run_name": "benchmark_merge<merge_v4>/1860/140",
+      "run_type": "iteration",
+      "iterations": 559624,
+      "real_time": 1.2477047160198558e+03,
+      "cpu_time": 1.2476394865123732e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1840/160",
+      "run_name": "benchmark_merge<merge_v4>/1840/160",
+      "run_type": "iteration",
+      "iterations": 537738,
+      "real_time": 1.2684374342448530e+03,
+      "cpu_time": 1.2680710680666034e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1820/180",
+      "run_name": "benchmark_merge<merge_v4>/1820/180",
+      "run_type": "iteration",
+      "iterations": 526007,
+      "real_time": 1.2777297032732217e+03,
+      "cpu_time": 1.2776255829295064e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1800/200",
+      "run_name": "benchmark_merge<merge_v4>/1800/200",
+      "run_type": "iteration",
+      "iterations": 527907,
+      "real_time": 1.2980233677327722e+03,
+      "cpu_time": 1.2979407357735338e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1780/220",
+      "run_name": "benchmark_merge<merge_v4>/1780/220",
+      "run_type": "iteration",
+      "iterations": 525320,
+      "real_time": 1.3177787767058946e+03,
+      "cpu_time": 1.3177529886545349e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1760/240",
+      "run_name": "benchmark_merge<merge_v4>/1760/240",
+      "run_type": "iteration",
+      "iterations": 508414,
+      "real_time": 1.3296314105897377e+03,
+      "cpu_time": 1.3295444263926654e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1740/260",
+      "run_name": "benchmark_merge<merge_v4>/1740/260",
+      "run_type": "iteration",
+      "iterations": 510238,
+      "real_time": 1.3645752433138582e+03,
+      "cpu_time": 1.3640222797988388e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1720/280",
+      "run_name": "benchmark_merge<merge_v4>/1720/280",
+      "run_type": "iteration",
+      "iterations": 504141,
+      "real_time": 1.3658703200708978e+03,
+      "cpu_time": 1.3657528350203620e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1700/300",
+      "run_name": "benchmark_merge<merge_v4>/1700/300",
+      "run_type": "iteration",
+      "iterations": 495705,
+      "real_time": 1.3833154053707549e+03,
+      "cpu_time": 1.3832218759141058e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1680/320",
+      "run_name": "benchmark_merge<merge_v4>/1680/320",
+      "run_type": "iteration",
+      "iterations": 489665,
+      "real_time": 1.4178167808574487e+03,
+      "cpu_time": 1.4176876027488202e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1660/340",
+      "run_name": "benchmark_merge<merge_v4>/1660/340",
+      "run_type": "iteration",
+      "iterations": 492109,
+      "real_time": 1.4093261655685237e+03,
+      "cpu_time": 1.4090740059620925e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1640/360",
+      "run_name": "benchmark_merge<merge_v4>/1640/360",
+      "run_type": "iteration",
+      "iterations": 484422,
+      "real_time": 1.4240314023580399e+03,
+      "cpu_time": 1.4239774411566755e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1620/380",
+      "run_name": "benchmark_merge<merge_v4>/1620/380",
+      "run_type": "iteration",
+      "iterations": 462636,
+      "real_time": 1.4512849778458904e+03,
+      "cpu_time": 1.4506004720773981e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1600/400",
+      "run_name": "benchmark_merge<merge_v4>/1600/400",
+      "run_type": "iteration",
+      "iterations": 453697,
+      "real_time": 1.4686503371515612e+03,
+      "cpu_time": 1.4684844731175256e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1580/420",
+      "run_name": "benchmark_merge<merge_v4>/1580/420",
+      "run_type": "iteration",
+      "iterations": 462804,
+      "real_time": 1.4837432995287907e+03,
+      "cpu_time": 1.4835416288536785e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1560/440",
+      "run_name": "benchmark_merge<merge_v4>/1560/440",
+      "run_type": "iteration",
+      "iterations": 456210,
+      "real_time": 1.4912270182263810e+03,
+      "cpu_time": 1.4910808618837823e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1540/460",
+      "run_name": "benchmark_merge<merge_v4>/1540/460",
+      "run_type": "iteration",
+      "iterations": 460054,
+      "real_time": 1.5542081755842048e+03,
+      "cpu_time": 1.5538284636151416e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1520/480",
+      "run_name": "benchmark_merge<merge_v4>/1520/480",
+      "run_type": "iteration",
+      "iterations": 403563,
+      "real_time": 1.5725729564275434e+03,
+      "cpu_time": 1.5724855846546957e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1500/500",
+      "run_name": "benchmark_merge<merge_v4>/1500/500",
+      "run_type": "iteration",
+      "iterations": 441095,
+      "real_time": 1.5543680771620150e+03,
+      "cpu_time": 1.5540371121867088e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1480/520",
+      "run_name": "benchmark_merge<merge_v4>/1480/520",
+      "run_type": "iteration",
+      "iterations": 424307,
+      "real_time": 1.5955935490223176e+03,
+      "cpu_time": 1.5955452066546086e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1460/540",
+      "run_name": "benchmark_merge<merge_v4>/1460/540",
+      "run_type": "iteration",
+      "iterations": 430965,
+      "real_time": 1.6049700740746803e+03,
+      "cpu_time": 1.6048727854930135e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1440/560",
+      "run_name": "benchmark_merge<merge_v4>/1440/560",
+      "run_type": "iteration",
+      "iterations": 432505,
+      "real_time": 1.5932300967278452e+03,
+      "cpu_time": 1.5930775366758853e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1420/580",
+      "run_name": "benchmark_merge<merge_v4>/1420/580",
+      "run_type": "iteration",
+      "iterations": 420138,
+      "real_time": 1.6361185586806919e+03,
+      "cpu_time": 1.6359981720291919e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1400/600",
+      "run_name": "benchmark_merge<merge_v4>/1400/600",
+      "run_type": "iteration",
+      "iterations": 416322,
+      "real_time": 1.6224798088688231e+03,
+      "cpu_time": 1.6224653032988854e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1380/620",
+      "run_name": "benchmark_merge<merge_v4>/1380/620",
+      "run_type": "iteration",
+      "iterations": 418931,
+      "real_time": 1.6374258983304169e+03,
+      "cpu_time": 1.6372672349384472e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1360/640",
+      "run_name": "benchmark_merge<merge_v4>/1360/640",
+      "run_type": "iteration",
+      "iterations": 418583,
+      "real_time": 1.6969159186434413e+03,
+      "cpu_time": 1.6963445720442446e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1340/660",
+      "run_name": "benchmark_merge<merge_v4>/1340/660",
+      "run_type": "iteration",
+      "iterations": 373339,
+      "real_time": 1.7167743338934051e+03,
+      "cpu_time": 1.7165819804520827e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1320/680",
+      "run_name": "benchmark_merge<merge_v4>/1320/680",
+      "run_type": "iteration",
+      "iterations": 396432,
+      "real_time": 1.7357470965274410e+03,
+      "cpu_time": 1.7355612059571370e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1300/700",
+      "run_name": "benchmark_merge<merge_v4>/1300/700",
+      "run_type": "iteration",
+      "iterations": 402709,
+      "real_time": 1.7304749185341084e+03,
+      "cpu_time": 1.7303089824165756e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1280/720",
+      "run_name": "benchmark_merge<merge_v4>/1280/720",
+      "run_type": "iteration",
+      "iterations": 402570,
+      "real_time": 1.7242660630896155e+03,
+      "cpu_time": 1.7241498372953868e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1260/740",
+      "run_name": "benchmark_merge<merge_v4>/1260/740",
+      "run_type": "iteration",
+      "iterations": 402447,
+      "real_time": 1.6874753495668342e+03,
+      "cpu_time": 1.6871761995989561e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1240/760",
+      "run_name": "benchmark_merge<merge_v4>/1240/760",
+      "run_type": "iteration",
+      "iterations": 386742,
+      "real_time": 1.7537869044117749e+03,
+      "cpu_time": 1.7533652926240063e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1220/780",
+      "run_name": "benchmark_merge<merge_v4>/1220/780",
+      "run_type": "iteration",
+      "iterations": 403412,
+      "real_time": 1.7188445609221558e+03,
+      "cpu_time": 1.7187515492846023e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1200/800",
+      "run_name": "benchmark_merge<merge_v4>/1200/800",
+      "run_type": "iteration",
+      "iterations": 395366,
+      "real_time": 1.7220073551751429e+03,
+      "cpu_time": 1.7219234835570126e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1180/820",
+      "run_name": "benchmark_merge<merge_v4>/1180/820",
+      "run_type": "iteration",
+      "iterations": 396540,
+      "real_time": 1.7408864200587277e+03,
+      "cpu_time": 1.7407726837141104e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1160/840",
+      "run_name": "benchmark_merge<merge_v4>/1160/840",
+      "run_type": "iteration",
+      "iterations": 389092,
+      "real_time": 1.7645354954316419e+03,
+      "cpu_time": 1.7644079035292477e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1140/860",
+      "run_name": "benchmark_merge<merge_v4>/1140/860",
+      "run_type": "iteration",
+      "iterations": 395369,
+      "real_time": 1.7904209282780375e+03,
+      "cpu_time": 1.7900847056800058e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1120/880",
+      "run_name": "benchmark_merge<merge_v4>/1120/880",
+      "run_type": "iteration",
+      "iterations": 377658,
+      "real_time": 1.7938839983412790e+03,
+      "cpu_time": 1.7932732789984636e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1100/900",
+      "run_name": "benchmark_merge<merge_v4>/1100/900",
+      "run_type": "iteration",
+      "iterations": 386100,
+      "real_time": 1.7729236157172006e+03,
+      "cpu_time": 1.7728567728567725e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1080/920",
+      "run_name": "benchmark_merge<merge_v4>/1080/920",
+      "run_type": "iteration",
+      "iterations": 376591,
+      "real_time": 1.8244201108725208e+03,
+      "cpu_time": 1.8243160351681304e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1060/940",
+      "run_name": "benchmark_merge<merge_v4>/1060/940",
+      "run_type": "iteration",
+      "iterations": 368724,
+      "real_time": 1.8155068342870400e+03,
+      "cpu_time": 1.8153957973986066e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1040/960",
+      "run_name": "benchmark_merge<merge_v4>/1040/960",
+      "run_type": "iteration",
+      "iterations": 377182,
+      "real_time": 1.8308582673993437e+03,
+      "cpu_time": 1.8306838608417092e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1020/980",
+      "run_name": "benchmark_merge<merge_v4>/1020/980",
+      "run_type": "iteration",
+      "iterations": 372376,
+      "real_time": 1.8270826450141039e+03,
+      "cpu_time": 1.8270726362601195e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/1000/1000",
+      "run_name": "benchmark_merge<merge_v4>/1000/1000",
+      "run_type": "iteration",
+      "iterations": 376660,
+      "real_time": 1.8392895714658309e+03,
+      "cpu_time": 1.8388998035363575e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/980/1020",
+      "run_name": "benchmark_merge<merge_v4>/980/1020",
+      "run_type": "iteration",
+      "iterations": 363536,
+      "real_time": 1.9046461203629351e+03,
+      "cpu_time": 1.9045321508736404e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/960/1040",
+      "run_name": "benchmark_merge<merge_v4>/960/1040",
+      "run_type": "iteration",
+      "iterations": 358274,
+      "real_time": 1.8717804082634020e+03,
+      "cpu_time": 1.8716457236640224e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/940/1060",
+      "run_name": "benchmark_merge<merge_v4>/940/1060",
+      "run_type": "iteration",
+      "iterations": 367947,
+      "real_time": 1.9023014048295411e+03,
+      "cpu_time": 1.9020320861428561e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/920/1080",
+      "run_name": "benchmark_merge<merge_v4>/920/1080",
+      "run_type": "iteration",
+      "iterations": 370653,
+      "real_time": 1.8954710848837019e+03,
+      "cpu_time": 1.8942730802124863e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/900/1100",
+      "run_name": "benchmark_merge<merge_v4>/900/1100",
+      "run_type": "iteration",
+      "iterations": 369187,
+      "real_time": 1.8968844487849017e+03,
+      "cpu_time": 1.8966323299574676e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/880/1120",
+      "run_name": "benchmark_merge<merge_v4>/880/1120",
+      "run_type": "iteration",
+      "iterations": 359962,
+      "real_time": 1.8961421317530130e+03,
+      "cpu_time": 1.8955584200554583e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/860/1140",
+      "run_name": "benchmark_merge<merge_v4>/860/1140",
+      "run_type": "iteration",
+      "iterations": 354339,
+      "real_time": 1.9121624518238600e+03,
+      "cpu_time": 1.9121519223116950e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/840/1160",
+      "run_name": "benchmark_merge<merge_v4>/840/1160",
+      "run_type": "iteration",
+      "iterations": 359470,
+      "real_time": 1.9596538069739408e+03,
+      "cpu_time": 1.9582329540712594e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/820/1180",
+      "run_name": "benchmark_merge<merge_v4>/820/1180",
+      "run_type": "iteration",
+      "iterations": 348950,
+      "real_time": 1.9815402578651640e+03,
+      "cpu_time": 1.9811950136122500e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/800/1200",
+      "run_name": "benchmark_merge<merge_v4>/800/1200",
+      "run_type": "iteration",
+      "iterations": 354800,
+      "real_time": 1.9194525620270638e+03,
+      "cpu_time": 1.9194391206313533e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/780/1220",
+      "run_name": "benchmark_merge<merge_v4>/780/1220",
+      "run_type": "iteration",
+      "iterations": 347217,
+      "real_time": 1.9519170374782759e+03,
+      "cpu_time": 1.9518802362787533e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/760/1240",
+      "run_name": "benchmark_merge<merge_v4>/760/1240",
+      "run_type": "iteration",
+      "iterations": 355090,
+      "real_time": 1.9086477935768235e+03,
+      "cpu_time": 1.9079641780956867e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/740/1260",
+      "run_name": "benchmark_merge<merge_v4>/740/1260",
+      "run_type": "iteration",
+      "iterations": 352272,
+      "real_time": 1.9730261104848926e+03,
+      "cpu_time": 1.9726461370758905e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/720/1280",
+      "run_name": "benchmark_merge<merge_v4>/720/1280",
+      "run_type": "iteration",
+      "iterations": 353551,
+      "real_time": 1.9735353881815704e+03,
+      "cpu_time": 1.9733928061297972e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/700/1300",
+      "run_name": "benchmark_merge<merge_v4>/700/1300",
+      "run_type": "iteration",
+      "iterations": 342253,
+      "real_time": 1.9983125961026183e+03,
+      "cpu_time": 1.9979897911778571e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/680/1320",
+      "run_name": "benchmark_merge<merge_v4>/680/1320",
+      "run_type": "iteration",
+      "iterations": 349799,
+      "real_time": 2.0055767456022543e+03,
+      "cpu_time": 2.0049714264477664e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/660/1340",
+      "run_name": "benchmark_merge<merge_v4>/660/1340",
+      "run_type": "iteration",
+      "iterations": 331563,
+      "real_time": 2.0379747106842970e+03,
+      "cpu_time": 2.0378932510563482e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/640/1360",
+      "run_name": "benchmark_merge<merge_v4>/640/1360",
+      "run_type": "iteration",
+      "iterations": 331439,
+      "real_time": 1.9931575464160146e+03,
+      "cpu_time": 1.9926079912140790e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/620/1380",
+      "run_name": "benchmark_merge<merge_v4>/620/1380",
+      "run_type": "iteration",
+      "iterations": 320520,
+      "real_time": 2.1387443904314341e+03,
+      "cpu_time": 2.1385404966928563e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/600/1400",
+      "run_name": "benchmark_merge<merge_v4>/600/1400",
+      "run_type": "iteration",
+      "iterations": 349179,
+      "real_time": 1.9700278337792877e+03,
+      "cpu_time": 1.9695972552759476e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/580/1420",
+      "run_name": "benchmark_merge<merge_v4>/580/1420",
+      "run_type": "iteration",
+      "iterations": 320224,
+      "real_time": 2.0951172242123880e+03,
+      "cpu_time": 2.0950397221944604e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/560/1440",
+      "run_name": "benchmark_merge<merge_v4>/560/1440",
+      "run_type": "iteration",
+      "iterations": 324116,
+      "real_time": 2.1350521264652552e+03,
+      "cpu_time": 2.1348683804563702e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/540/1460",
+      "run_name": "benchmark_merge<merge_v4>/540/1460",
+      "run_type": "iteration",
+      "iterations": 325073,
+      "real_time": 2.0993312301004571e+03,
+      "cpu_time": 2.0991777231575488e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/520/1480",
+      "run_name": "benchmark_merge<merge_v4>/520/1480",
+      "run_type": "iteration",
+      "iterations": 299000,
+      "real_time": 2.1766466053551608e+03,
+      "cpu_time": 2.1759598662207204e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/500/1500",
+      "run_name": "benchmark_merge<merge_v4>/500/1500",
+      "run_type": "iteration",
+      "iterations": 324727,
+      "real_time": 2.1248329798455325e+03,
+      "cpu_time": 2.1245661740477340e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/480/1520",
+      "run_name": "benchmark_merge<merge_v4>/480/1520",
+      "run_type": "iteration",
+      "iterations": 294364,
+      "real_time": 2.3565373211497867e+03,
+      "cpu_time": 2.3560829449253229e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/460/1540",
+      "run_name": "benchmark_merge<merge_v4>/460/1540",
+      "run_type": "iteration",
+      "iterations": 295853,
+      "real_time": 2.3838144550880875e+03,
+      "cpu_time": 2.3833829638367033e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/440/1560",
+      "run_name": "benchmark_merge<merge_v4>/440/1560",
+      "run_type": "iteration",
+      "iterations": 307459,
+      "real_time": 2.2647378966085053e+03,
+      "cpu_time": 2.2646401634038730e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/420/1580",
+      "run_name": "benchmark_merge<merge_v4>/420/1580",
+      "run_type": "iteration",
+      "iterations": 294150,
+      "real_time": 2.3831624136634514e+03,
+      "cpu_time": 2.3830630630630844e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/400/1600",
+      "run_name": "benchmark_merge<merge_v4>/400/1600",
+      "run_type": "iteration",
+      "iterations": 305180,
+      "real_time": 2.2692019692894646e+03,
+      "cpu_time": 2.2683203355396727e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/380/1620",
+      "run_name": "benchmark_merge<merge_v4>/380/1620",
+      "run_type": "iteration",
+      "iterations": 269952,
+      "real_time": 2.5440274308345479e+03,
+      "cpu_time": 2.5439670756282298e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/360/1640",
+      "run_name": "benchmark_merge<merge_v4>/360/1640",
+      "run_type": "iteration",
+      "iterations": 279144,
+      "real_time": 2.4803922134475988e+03,
+      "cpu_time": 2.4801464477115255e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/340/1660",
+      "run_name": "benchmark_merge<merge_v4>/340/1660",
+      "run_type": "iteration",
+      "iterations": 271686,
+      "real_time": 2.5523003100940459e+03,
+      "cpu_time": 2.5521410746229185e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/320/1680",
+      "run_name": "benchmark_merge<merge_v4>/320/1680",
+      "run_type": "iteration",
+      "iterations": 280265,
+      "real_time": 2.4735388006438316e+03,
+      "cpu_time": 2.4710720211228613e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/300/1700",
+      "run_name": "benchmark_merge<merge_v4>/300/1700",
+      "run_type": "iteration",
+      "iterations": 254075,
+      "real_time": 2.7292401336582880e+03,
+      "cpu_time": 2.7290052149955586e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/280/1720",
+      "run_name": "benchmark_merge<merge_v4>/280/1720",
+      "run_type": "iteration",
+      "iterations": 252319,
+      "real_time": 2.7095570923768009e+03,
+      "cpu_time": 2.7080243659811404e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/260/1740",
+      "run_name": "benchmark_merge<merge_v4>/260/1740",
+      "run_type": "iteration",
+      "iterations": 268658,
+      "real_time": 2.5435275667453916e+03,
+      "cpu_time": 2.5433078486403178e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/240/1760",
+      "run_name": "benchmark_merge<merge_v4>/240/1760",
+      "run_type": "iteration",
+      "iterations": 268163,
+      "real_time": 2.5878648358713808e+03,
+      "cpu_time": 2.5874300332260232e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/220/1780",
+      "run_name": "benchmark_merge<merge_v4>/220/1780",
+      "run_type": "iteration",
+      "iterations": 265392,
+      "real_time": 2.5900670406165345e+03,
+      "cpu_time": 2.5898180804244562e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/200/1800",
+      "run_name": "benchmark_merge<merge_v4>/200/1800",
+      "run_type": "iteration",
+      "iterations": 264479,
+      "real_time": 2.5938135089198217e+03,
+      "cpu_time": 2.5937673690538772e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/180/1820",
+      "run_name": "benchmark_merge<merge_v4>/180/1820",
+      "run_type": "iteration",
+      "iterations": 271633,
+      "real_time": 2.5047620943390998e+03,
+      "cpu_time": 2.5038305360541422e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/160/1840",
+      "run_name": "benchmark_merge<merge_v4>/160/1840",
+      "run_type": "iteration",
+      "iterations": 262095,
+      "real_time": 2.6074453576135393e+03,
+      "cpu_time": 2.6071195558862182e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/140/1860",
+      "run_name": "benchmark_merge<merge_v4>/140/1860",
+      "run_type": "iteration",
+      "iterations": 277409,
+      "real_time": 2.4707869428314425e+03,
+      "cpu_time": 2.4707741998277133e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/120/1880",
+      "run_name": "benchmark_merge<merge_v4>/120/1880",
+      "run_type": "iteration",
+      "iterations": 282820,
+      "real_time": 2.4643464712426066e+03,
+      "cpu_time": 2.4642776324164088e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/100/1900",
+      "run_name": "benchmark_merge<merge_v4>/100/1900",
+      "run_type": "iteration",
+      "iterations": 287719,
+      "real_time": 2.4395747519325969e+03,
+      "cpu_time": 2.4391576503463361e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/80/1920",
+      "run_name": "benchmark_merge<merge_v4>/80/1920",
+      "run_type": "iteration",
+      "iterations": 302194,
+      "real_time": 2.3015659774556971e+03,
+      "cpu_time": 2.3012634268053198e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/60/1940",
+      "run_name": "benchmark_merge<merge_v4>/60/1940",
+      "run_type": "iteration",
+      "iterations": 313766,
+      "real_time": 2.2239277741119031e+03,
+      "cpu_time": 2.2238706552016247e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/40/1960",
+      "run_name": "benchmark_merge<merge_v4>/40/1960",
+      "run_type": "iteration",
+      "iterations": 341572,
+      "real_time": 2.0375118070663075e+03,
+      "cpu_time": 2.0370814937992416e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/20/1980",
+      "run_name": "benchmark_merge<merge_v4>/20/1980",
+      "run_type": "iteration",
+      "iterations": 377005,
+      "real_time": 1.8388402355574397e+03,
+      "cpu_time": 1.8387634116258114e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<merge_v4>/0/2000",
+      "run_name": "benchmark_merge<merge_v4>/0/2000",
+      "run_type": "iteration",
+      "iterations": 1335164,
+      "real_time": 5.0820313236291616e+02,
+      "cpu_time": 5.0809563469356942e+02,
+      "time_unit": "ns"
+    }
+  ]
+}
