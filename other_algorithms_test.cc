@@ -182,6 +182,12 @@ void test_merge(Merger merger) {
 
 }  // namespace
 
+TEST_CASE("upper_bound_merge") {
+  test_merge([](auto f1, auto l1, auto f2, auto l2, auto o) {
+    return srt::upper_bound_merge::merge(f1, l1, f2, l2, o, stability_less{});
+  });
+}
+
 TEST_CASE("libstd_merge") {
   test_merge([](auto f1, auto l1, auto f2, auto l2, auto o) {
     return srt::libstd::merge(f1, l1, f2, l2, o, stability_less{});

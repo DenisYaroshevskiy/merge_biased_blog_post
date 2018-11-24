@@ -10,6 +10,27 @@ namespace srt {
 //       InputIterator<I1> && InputIterator<I2> && OutputIterator<O> &&
 //       StrictWeakOrder<P(ValueType<I>, V)>
 
+// ForwardInputMergeRequirements<I1, I2, O, P> =
+//       ForwardIterator<I1> && InputIterator<I2> && OutputIterator<O> &&
+//       StrictWeakOrder<P(ValueType<I>, V)>
+
+namespace upper_bound_merge {
+
+template <typename I1, typename I2, typename O, typename P>
+// requiers ForwardInputMergeRequirements<I1, I2, O, P>
+O merge(I1 f1, I1 l1, I2 f2, I2 l2, O o, P p) {
+  while (true) {
+    if (f2 == l2) return std::copy(f1, l1, o);
+    I1 next_f1 = std::upper_bound(f1, l1, *f2, p);
+    o = std::copy(f1, next_f1, o);
+    f1 = next_f1;
+    if (f1 == l1) return std::copy(f2, l2, o);
+    *o++ = *f2++;
+  }
+}
+
+}  // namespace upper_bound_merge
+
 namespace libstd {
 
 template <typename I1, typename I2, typename O, typename P>
@@ -167,7 +188,7 @@ copyFirst:
 namespace v6 {
 
 template <typename I1, typename I2, typename O, typename P>
-// requiers InputMergeRequirements<I1, I2, O, P>
+// requiers ForwardInputMergeRequirements<I1, I2, O, P>
 O merge(I1 f1, I1 l1, I2 f2, I2 l2, O o, P p) {
   I1 next_f1 = f1;
 
@@ -207,7 +228,7 @@ copyFirst:
 namespace v7 {
 
 template <typename I1, typename I2, typename O, typename P>
-// requiers InputMergeRequirements<I1, I2, O, P>
+// requiers ForwardInputMergeRequirements<I1, I2, O, P>
 O merge(I1 f1, I1 l1, I2 f2, I2 l2, O o, P p) {
   I1 next_f1 = f1;
 
@@ -279,7 +300,7 @@ I find_boundary(I f, I l, P p) {
 }
 
 template <typename I1, typename I2, typename O, typename P>
-// requiers InputMergeRequirements<I1, I2, O, P>
+// requiers ForwardInputMergeRequirements<I1, I2, O, P>
 O merge(I1 f1, I1 l1, I2 f2, I2 l2, O o, P p) {
   if (f1 == l1) goto copySecond;
   if (f2 == l2) goto copyFirst;
