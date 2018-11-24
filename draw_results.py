@@ -4,12 +4,18 @@ import plotly
 
 def generateMapOfStyles():
     styles = {}
+
+    styles['benchmark_merge<upper_bound_based_merge>'] = dict(
+        mode = 'lines',
+        name = 'upper_bound_based_merge',
+        line = dict(width = 3, dash = 'solid', color = 'rgb(000, 100, 100)')
+    )
+
     styles['benchmark_merge<std_merge>'] = dict(
         mode = 'lines',
         name = 'std_merge',
         line = dict(width = 3, dash = 'dash', color = 'rgb(100, 100, 0)')
     )
-
 
     styles['benchmark_merge<merge_v1>'] = dict(
         mode = 'lines',
@@ -104,7 +110,7 @@ class runner:
             xs = []
             times = []
             for measurement in loaded['benchmarks']:
-                x = int(measurement['name'].split('/')[1])
+                x = int(measurement['name'].split('/')[2])
                 if x < self.smallestX or x > self.biggestX:
                     continue
                 xs.append(x)
@@ -125,7 +131,14 @@ class runner:
     def generateLayout(self):
         layout = {}
 
-        layout['title'] = 'Merging two vectors, total size: {}'.format(self.benchmarks[0].xs[0])
+        maxRhsSize = self.benchmarks[0].xs[-1]
+
+        if maxRhsSize == 40:
+            layout['title'] = 'First 40 elements'
+        else:
+            layout['title'] = 'Total range'
+
+
         layout['xaxis'] = dict(title = 'distance(f, result)')
         layout['yaxis'] = dict(title = 'ns')
 

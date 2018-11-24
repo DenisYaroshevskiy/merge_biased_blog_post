@@ -12,7 +12,7 @@
 
 namespace {
 
-constexpr bool kOnlyLastElements = false;
+constexpr bool kOnlyLastElements = true;
 constexpr std::size_t kBigStep = 20;
 
 constexpr std::size_t kProblemSize = 2000u;
@@ -63,6 +63,13 @@ const test_merge_input& input_data(std::size_t lhs_size, std::size_t rhs_size) {
                 random_test_type_sorted_vec(rhs_size)}})
       .first->second;
 }
+
+struct upper_bound_based_merge {
+  template <typename I1, typename I2, typename O>
+  O operator()(I1 f1, I1 l1, I2 f2, I2 l2, O o) {
+    return srt::upper_bound_based::merge(f1, l1, f2, l2, o, std::less<>{});
+  }
+};
 
 struct std_merge {
   template <typename I1, typename I2, typename O>
@@ -150,5 +157,5 @@ void benchmark_merge(benchmark::State& state) {
   }
 }
 
-BENCHMARK_TEMPLATE(benchmark_merge, merge_v8)
+BENCHMARK_TEMPLATE(benchmark_merge, upper_bound_based_merge)
     ->Apply(set_benchmark_input_sizes);

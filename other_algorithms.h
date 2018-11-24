@@ -14,7 +14,7 @@ namespace srt {
 //       ForwardIterator<I1> && InputIterator<I2> && OutputIterator<O> &&
 //       StrictWeakOrder<P(ValueType<I>, V)>
 
-namespace upper_bound_merge {
+namespace upper_bound_based {
 
 template <typename I1, typename I2, typename O, typename P>
 // requiers ForwardInputMergeRequirements<I1, I2, O, P>
@@ -29,7 +29,7 @@ O merge(I1 f1, I1 l1, I2 f2, I2 l2, O o, P p) {
   }
 }
 
-}  // namespace upper_bound_merge
+}  // namespace upper_bound_based
 
 namespace libstd {
 
