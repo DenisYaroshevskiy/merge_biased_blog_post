@@ -209,6 +209,7 @@ while(true) {
 
     next_f1 = std::upper_bound(f1, l1, *f2, p);
     o = std::copy(f1, next_f1, o);
+
     f1 = next_f1; if (f1 == l1) goto copySecond;
 
     goto takeSecond;

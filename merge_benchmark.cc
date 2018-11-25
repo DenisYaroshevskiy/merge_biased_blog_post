@@ -12,7 +12,7 @@
 
 namespace {
 
-constexpr bool kOnlyLastElements = false;
+constexpr bool kOnlyLastElements = true;
 constexpr std::size_t kBigStep = 20;
 
 constexpr std::size_t kProblemSize = 2000u;
@@ -157,5 +157,5 @@ void benchmark_merge(benchmark::State& state) {
   }
 }
 
-BENCHMARK_TEMPLATE(benchmark_merge, merge_v3)
+BENCHMARK_TEMPLATE(benchmark_merge, merge_v8)
     ->Apply(set_benchmark_input_sizes);

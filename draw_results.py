@@ -8,7 +8,7 @@ def generateMapOfStyles():
     styles['benchmark_merge<upper_bound_based_merge>'] = dict(
         mode = 'lines',
         name = 'upper_bound',
-        line = dict(width = 3, dash = 'solid', color = 'rgb(000, 100, 100)')
+        line = dict(width = 3, dash = 'dot', color = 'rgb(000, 100, 255)')
     )
 
     styles['benchmark_merge<std_merge>'] = dict(
@@ -37,7 +37,7 @@ def generateMapOfStyles():
 
     styles['benchmark_merge<merge_v3>'] = dict(
         mode = 'lines',
-        name = 'no_unrolling_same_merge',
+        name = 'best_linear',
         line = dict(width = 3, dash = 'solid', color = 'rgb(000, 153, 076)')
     )
 
@@ -55,7 +55,7 @@ def generateMapOfStyles():
 
     styles['benchmark_merge<merge_v6>'] = dict(
         mode = 'lines',
-        name = 'merge_v6',
+        name = 'upper_bound_fallback',
         line = dict(width = 3, dash = 'dash', color = 'rgb(100, 100, 0)')
     )
 
@@ -67,7 +67,7 @@ def generateMapOfStyles():
 
     styles['benchmark_merge<merge_v8>'] = dict(
         mode = 'lines',
-        name = 'merge_v8',
+        name = 'merge_biased',
         line = dict(width = 3, dash = 'solid', color = 'rgb(0, 0, 0)')
     )
 
