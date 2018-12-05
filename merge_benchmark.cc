@@ -12,13 +12,11 @@
 
 namespace {
 
-constexpr bool kOnlyLastElements = true;
-constexpr std::size_t kBigStep = 20;
+constexpr bool kOnlyLastElements = false;
 
 constexpr std::size_t kProblemSize = 2'000'000u;
-constexpr std::size_t kStep = kOnlyLastElements ? 1 : kBigStep;
-constexpr std::size_t kMaxRhsSize =
-    kOnlyLastElements ? kBigStep * 2 : kProblemSize;
+constexpr std::size_t kMaxRhsSize = kOnlyLastElements ? 40 : kProblemSize;
+constexpr std::size_t kStep = kMaxRhsSize / 40;
 
 void set_benchmark_input_sizes(benchmark::internal::Benchmark* bench) {
   std::size_t lhs_size = kProblemSize;
@@ -159,11 +157,9 @@ void benchmark_merge(benchmark::State& state) {
   const test_merge_input& input = input_data(lhs_size, rhs_size);
   for (auto _ : state) {
     test_type_vec res(lhs_size + rhs_size);
-    Merger{}(input.first.begin(), input.first.end(),
-                                      input.second.begin(), input.second.end(),
-                                      res.begin());
+    Merger{}(input.first.begin(), input.first.end(), input.second.begin(),
+             input.second.end(), res.begin());
   }
 }
 
-BENCHMARK_TEMPLATE(benchmark_merge, std_merge)
-    ->Apply(set_benchmark_input_sizes);
+BENCHMARK_TEMPLATE(benchmark_merge, merge_v8)->Apply(set_benchmark_input_sizes);

@@ -1,0 +1,408 @@
+{
+  "context": {
+    "date": "2018-12-05 20:57:20",
+    "executable": "./benchmarks",
+    "num_cpus": 8,
+    "mhz_per_cpu": 2800,
+    "cpu_scaling_enabled": false,
+    "caches": [
+      {
+        "type": "Data",
+        "level": 1,
+        "size": 32768000,
+        "num_sharing": 2
+      },
+      {
+        "type": "Instruction",
+        "level": 1,
+        "size": 32768000,
+        "num_sharing": 2
+      },
+      {
+        "type": "Unified",
+        "level": 2,
+        "size": 262144000,
+        "num_sharing": 2
+      },
+      {
+        "type": "Unified",
+        "level": 3,
+        "size": 6291456000,
+        "num_sharing": 8
+      }
+    ],
+    "load_avg": [1.90332,1.71045,1.43115],
+    "library_build_type": "release"
+  },
+  "benchmarks": [
+    {
+      "name": "benchmark_merge<std_copy>/2000/0",
+      "run_name": "benchmark_merge<std_copy>/2000/0",
+      "run_type": "iteration",
+      "iterations": 1138897,
+      "real_time": 5.6011119881816944e+02,
+      "cpu_time": 5.5956245384788963e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1999/1",
+      "run_name": "benchmark_merge<std_copy>/1999/1",
+      "run_type": "iteration",
+      "iterations": 1268737,
+      "real_time": 5.4869944362011074e+02,
+      "cpu_time": 5.4853448744696504e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1998/2",
+      "run_name": "benchmark_merge<std_copy>/1998/2",
+      "run_type": "iteration",
+      "iterations": 1189546,
+      "real_time": 5.6822668984607344e+02,
+      "cpu_time": 5.6818819953158584e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1997/3",
+      "run_name": "benchmark_merge<std_copy>/1997/3",
+      "run_type": "iteration",
+      "iterations": 1219342,
+      "real_time": 5.6850382091314441e+02,
+      "cpu_time": 5.6849841963944493e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1996/4",
+      "run_name": "benchmark_merge<std_copy>/1996/4",
+      "run_type": "iteration",
+      "iterations": 1223348,
+      "real_time": 5.2799107858091520e+02,
+      "cpu_time": 5.2797813868171602e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1995/5",
+      "run_name": "benchmark_merge<std_copy>/1995/5",
+      "run_type": "iteration",
+      "iterations": 1222942,
+      "real_time": 5.2194304799405518e+02,
+      "cpu_time": 5.2192826806177220e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1994/6",
+      "run_name": "benchmark_merge<std_copy>/1994/6",
+      "run_type": "iteration",
+      "iterations": 1210591,
+      "real_time": 5.4929663527969058e+02,
+      "cpu_time": 5.4925817224809998e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1993/7",
+      "run_name": "benchmark_merge<std_copy>/1993/7",
+      "run_type": "iteration",
+      "iterations": 1225941,
+      "real_time": 5.3908086278244377e+02,
+      "cpu_time": 5.3903083427342767e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1992/8",
+      "run_name": "benchmark_merge<std_copy>/1992/8",
+      "run_type": "iteration",
+      "iterations": 1220341,
+      "real_time": 5.4946974411270537e+02,
+      "cpu_time": 5.4936693924075337e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1991/9",
+      "run_name": "benchmark_merge<std_copy>/1991/9",
+      "run_type": "iteration",
+      "iterations": 1238456,
+      "real_time": 5.3039455418688590e+02,
+      "cpu_time": 5.3025057006466159e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1990/10",
+      "run_name": "benchmark_merge<std_copy>/1990/10",
+      "run_type": "iteration",
+      "iterations": 1261398,
+      "real_time": 5.3957399647056150e+02,
+      "cpu_time": 5.3957434528990780e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1989/11",
+      "run_name": "benchmark_merge<std_copy>/1989/11",
+      "run_type": "iteration",
+      "iterations": 1234154,
+      "real_time": 5.5247177985918279e+02,
+      "cpu_time": 5.5247238189075313e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1988/12",
+      "run_name": "benchmark_merge<std_copy>/1988/12",
+      "run_type": "iteration",
+      "iterations": 1236858,
+      "real_time": 5.5240033536577482e+02,
+      "cpu_time": 5.5230834905866232e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1987/13",
+      "run_name": "benchmark_merge<std_copy>/1987/13",
+      "run_type": "iteration",
+      "iterations": 1248284,
+      "real_time": 5.3446931707851070e+02,
+      "cpu_time": 5.3440322875243032e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1986/14",
+      "run_name": "benchmark_merge<std_copy>/1986/14",
+      "run_type": "iteration",
+      "iterations": 1208146,
+      "real_time": 5.2520225618418374e+02,
+      "cpu_time": 5.2518321461147821e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1985/15",
+      "run_name": "benchmark_merge<std_copy>/1985/15",
+      "run_type": "iteration",
+      "iterations": 1300366,
+      "real_time": 5.4008415399950695e+02,
+      "cpu_time": 5.4004334164381407e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1984/16",
+      "run_name": "benchmark_merge<std_copy>/1984/16",
+      "run_type": "iteration",
+      "iterations": 1305337,
+      "real_time": 5.2473189299015326e+02,
+      "cpu_time": 5.2473269354963384e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1983/17",
+      "run_name": "benchmark_merge<std_copy>/1983/17",
+      "run_type": "iteration",
+      "iterations": 1334121,
+      "real_time": 5.2034435032495423e+02,
+      "cpu_time": 5.2030587930180229e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1982/18",
+      "run_name": "benchmark_merge<std_copy>/1982/18",
+      "run_type": "iteration",
+      "iterations": 1341407,
+      "real_time": 5.1040600354699853e+02,
+      "cpu_time": 5.1036486316233743e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1981/19",
+      "run_name": "benchmark_merge<std_copy>/1981/19",
+      "run_type": "iteration",
+      "iterations": 1321927,
+      "real_time": 5.0309064494481078e+02,
+      "cpu_time": 5.0301491686000816e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1980/20",
+      "run_name": "benchmark_merge<std_copy>/1980/20",
+      "run_type": "iteration",
+      "iterations": 1359514,
+      "real_time": 5.2462702627575209e+02,
+      "cpu_time": 5.2459187621459034e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1979/21",
+      "run_name": "benchmark_merge<std_copy>/1979/21",
+      "run_type": "iteration",
+      "iterations": 1287333,
+      "real_time": 5.4310377112995229e+02,
+      "cpu_time": 5.4307393658051126e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1978/22",
+      "run_name": "benchmark_merge<std_copy>/1978/22",
+      "run_type": "iteration",
+      "iterations": 1336337,
+      "real_time": 5.1460681250315827e+02,
+      "cpu_time": 5.1459325005593962e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1977/23",
+      "run_name": "benchmark_merge<std_copy>/1977/23",
+      "run_type": "iteration",
+      "iterations": 1327417,
+      "real_time": 5.1151448188492770e+02,
+      "cpu_time": 5.1140297284124176e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1976/24",
+      "run_name": "benchmark_merge<std_copy>/1976/24",
+      "run_type": "iteration",
+      "iterations": 1306238,
+      "real_time": 5.2777349533536540e+02,
+      "cpu_time": 5.2762436860663922e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1975/25",
+      "run_name": "benchmark_merge<std_copy>/1975/25",
+      "run_type": "iteration",
+      "iterations": 1196643,
+      "real_time": 5.4384124087140322e+02,
+      "cpu_time": 5.4383805362167118e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1974/26",
+      "run_name": "benchmark_merge<std_copy>/1974/26",
+      "run_type": "iteration",
+      "iterations": 1203183,
+      "real_time": 5.4558160811779271e+02,
+      "cpu_time": 5.4555956990748632e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1973/27",
+      "run_name": "benchmark_merge<std_copy>/1973/27",
+      "run_type": "iteration",
+      "iterations": 1230877,
+      "real_time": 5.3904103740667574e+02,
+      "cpu_time": 5.3904167516331847e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1972/28",
+      "run_name": "benchmark_merge<std_copy>/1972/28",
+      "run_type": "iteration",
+      "iterations": 1333079,
+      "real_time": 5.0670259527024251e+02,
+      "cpu_time": 5.0667364799835400e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1971/29",
+      "run_name": "benchmark_merge<std_copy>/1971/29",
+      "run_type": "iteration",
+      "iterations": 1280902,
+      "real_time": 5.2140994705300170e+02,
+      "cpu_time": 5.2141069340199306e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1970/30",
+      "run_name": "benchmark_merge<std_copy>/1970/30",
+      "run_type": "iteration",
+      "iterations": 1316012,
+      "real_time": 5.3074063990287891e+02,
+      "cpu_time": 5.3074060114953500e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1969/31",
+      "run_name": "benchmark_merge<std_copy>/1969/31",
+      "run_type": "iteration",
+      "iterations": 1266991,
+      "real_time": 5.3860725293239693e+02,
+      "cpu_time": 5.3858867190058857e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1968/32",
+      "run_name": "benchmark_merge<std_copy>/1968/32",
+      "run_type": "iteration",
+      "iterations": 1302568,
+      "real_time": 5.2691293199287441e+02,
+      "cpu_time": 5.2688304948378641e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1967/33",
+      "run_name": "benchmark_merge<std_copy>/1967/33",
+      "run_type": "iteration",
+      "iterations": 1246261,
+      "real_time": 5.4143904928404629e+02,
+      "cpu_time": 5.4143955399390404e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1966/34",
+      "run_name": "benchmark_merge<std_copy>/1966/34",
+      "run_type": "iteration",
+      "iterations": 1344189,
+      "real_time": 5.1379516868549251e+02,
+      "cpu_time": 5.1379530705875425e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1965/35",
+      "run_name": "benchmark_merge<std_copy>/1965/35",
+      "run_type": "iteration",
+      "iterations": 1315097,
+      "real_time": 5.2635300209784759e+02,
+      "cpu_time": 5.2630946614584286e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1964/36",
+      "run_name": "benchmark_merge<std_copy>/1964/36",
+      "run_type": "iteration",
+      "iterations": 1262467,
+      "real_time": 5.4239634620139134e+02,
+      "cpu_time": 5.4239675175667855e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1963/37",
+      "run_name": "benchmark_merge<std_copy>/1963/37",
+      "run_type": "iteration",
+      "iterations": 1269312,
+      "real_time": 5.2424147569712352e+02,
+      "cpu_time": 5.2408706448847965e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1962/38",
+      "run_name": "benchmark_merge<std_copy>/1962/38",
+      "run_type": "iteration",
+      "iterations": 1260693,
+      "real_time": 5.5349515702878807e+02,
+      "cpu_time": 5.5349002493073181e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1961/39",
+      "run_name": "benchmark_merge<std_copy>/1961/39",
+      "run_type": "iteration",
+      "iterations": 1160170,
+      "real_time": 5.6015608143608779e+02,
+      "cpu_time": 5.6011618986872429e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<std_copy>/1960/40",
+      "run_name": "benchmark_merge<std_copy>/1960/40",
+      "run_type": "iteration",
+      "iterations": 1255966,
+      "real_time": 5.3996546721807010e+02,
+      "cpu_time": 5.3996445763659051e+02,
+      "time_unit": "ns"
+    }
+  ]
+}
