@@ -4,6 +4,17 @@
 
 namespace srt {
 
+namespace detail {
+
+struct less {
+  template <typename T, typename U>
+  bool operator()(const T& x, const U& y) {
+    return x < y;
+  }
+};
+
+}  // namespace detail
+
 // InputMergeRequirements<I1, I2, O, P> =
 //       InputIterator<I1> && InputIterator<I2> && OutputIterator<O> &&
 //       StrictWeakOrder<P(ValueType<I>, V)>
@@ -33,6 +44,11 @@ copySecond:
   return std::copy(f2, l2, o);
 copyFirst:
   return std::copy(f1, l1, o);
+}
+
+template <typename I1, typename I2, typename O>
+O merge_linear(I1 f1, I1 l1, I2 f2, I2 l2, O o) {
+  return merge_linear(f1, l1, f2, l2, o, detail::less{});
 }
 
 namespace detail {
@@ -101,6 +117,11 @@ copySecond:
   return std::copy(f2, l2, o);
 copyFirst:
   return std::copy(f1, l1, o);
+}
+
+template <typename I1, typename I2, typename O>
+O merge_biased(I1 f1, I1 l1, I2 f2, I2 l2, O o) {
+  return merge_biased(f1, l1, f2, l2, o, detail::less{});
 }
 
 }  // namespace srt
