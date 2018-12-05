@@ -1,0 +1,325 @@
+{
+  "context": {
+    "date": "2018-12-05 21:35:31",
+    "executable": "./benchmarks",
+    "num_cpus": 4,
+    "mhz_per_cpu": 1800,
+    "cpu_scaling_enabled": false,
+    "caches": [
+      {
+        "type": "Data",
+        "level": 1,
+        "size": 32768000,
+        "num_sharing": 2
+      },
+      {
+        "type": "Instruction",
+        "level": 1,
+        "size": 32768000,
+        "num_sharing": 2
+      },
+      {
+        "type": "Unified",
+        "level": 2,
+        "size": 262144000,
+        "num_sharing": 2
+      },
+      {
+        "type": "Unified",
+        "level": 3,
+        "size": 3145728000,
+        "num_sharing": 4
+      }
+    ],
+    "library_build_type": "release"
+  },
+  "benchmarks": [
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/2000/0",
+      "iterations": 946675,
+      "real_time": 7.3760251511194986e+02,
+      "cpu_time": 7.3606464731824531e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1999/1",
+      "iterations": 594667,
+      "real_time": 1.1632205099681739e+03,
+      "cpu_time": 1.1583793955272447e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1998/2",
+      "iterations": 808529,
+      "real_time": 8.5704731804178164e+02,
+      "cpu_time": 8.5386547668667447e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1997/3",
+      "iterations": 651642,
+      "real_time": 1.1366772246268879e+03,
+      "cpu_time": 1.1330561872930230e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1996/4",
+      "iterations": 599639,
+      "real_time": 1.1640663432585061e+03,
+      "cpu_time": 1.1595126401051298e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1995/5",
+      "iterations": 644158,
+      "real_time": 1.0883992172634426e+03,
+      "cpu_time": 1.0842898791911300e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1994/6",
+      "iterations": 585715,
+      "real_time": 1.2150872949831114e+03,
+      "cpu_time": 1.2102251094815747e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1993/7",
+      "iterations": 580556,
+      "real_time": 1.1824092043126825e+03,
+      "cpu_time": 1.1779208207304728e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1992/8",
+      "iterations": 557001,
+      "real_time": 1.2744043888715739e+03,
+      "cpu_time": 1.2702149547307820e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1991/9",
+      "iterations": 604011,
+      "real_time": 1.1534391393196570e+03,
+      "cpu_time": 1.1491462903821291e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1990/10",
+      "iterations": 534923,
+      "real_time": 1.3240678752241902e+03,
+      "cpu_time": 1.3190627436098264e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1989/11",
+      "iterations": 468525,
+      "real_time": 1.4683050766036047e+03,
+      "cpu_time": 1.4627650605624078e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1988/12",
+      "iterations": 527243,
+      "real_time": 1.3416228020192816e+03,
+      "cpu_time": 1.3364179325282630e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1987/13",
+      "iterations": 457699,
+      "real_time": 1.5260669194911868e+03,
+      "cpu_time": 1.5195248405611580e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1986/14",
+      "iterations": 504472,
+      "real_time": 1.3704088096370042e+03,
+      "cpu_time": 1.3658002822753317e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1985/15",
+      "iterations": 460369,
+      "real_time": 1.4950668029634530e+03,
+      "cpu_time": 1.4897202027069604e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1984/16",
+      "iterations": 496486,
+      "real_time": 1.3961376413485114e+03,
+      "cpu_time": 1.3911026695616808e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1983/17",
+      "iterations": 479472,
+      "real_time": 1.4480775415337616e+03,
+      "cpu_time": 1.4427161544365460e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1982/18",
+      "iterations": 485632,
+      "real_time": 1.4407589573929861e+03,
+      "cpu_time": 1.4344956675013195e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1981/19",
+      "iterations": 460899,
+      "real_time": 1.5165627154807494e+03,
+      "cpu_time": 1.5102701459538869e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1980/20",
+      "iterations": 450726,
+      "real_time": 1.5442472100476568e+03,
+      "cpu_time": 1.5382316529332697e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1979/21",
+      "iterations": 432732,
+      "real_time": 1.6090857251728535e+03,
+      "cpu_time": 1.6035537006738614e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1978/22",
+      "iterations": 399603,
+      "real_time": 1.7427765456827901e+03,
+      "cpu_time": 1.7363708480666967e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1977/23",
+      "iterations": 412024,
+      "real_time": 1.6872775372211572e+03,
+      "cpu_time": 1.6811180902083399e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1976/24",
+      "iterations": 405156,
+      "real_time": 1.7169421728653681e+03,
+      "cpu_time": 1.7101338743594977e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1975/25",
+      "iterations": 402070,
+      "real_time": 1.7335014201394331e+03,
+      "cpu_time": 1.7278832044171411e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1974/26",
+      "iterations": 378771,
+      "real_time": 1.8461867989109169e+03,
+      "cpu_time": 1.8382611129151862e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1973/27",
+      "iterations": 369807,
+      "real_time": 1.9078850210503335e+03,
+      "cpu_time": 1.8997233692169075e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1972/28",
+      "iterations": 378794,
+      "real_time": 1.8503375212362721e+03,
+      "cpu_time": 1.8420856718955408e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1971/29",
+      "iterations": 356950,
+      "real_time": 1.9696133632072244e+03,
+      "cpu_time": 1.9607732175374733e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1970/30",
+      "iterations": 370771,
+      "real_time": 1.8852808499016239e+03,
+      "cpu_time": 1.8776144844122130e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1969/31",
+      "iterations": 368906,
+      "real_time": 1.8971229798206889e+03,
+      "cpu_time": 1.8907878971879024e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1968/32",
+      "iterations": 346837,
+      "real_time": 1.9869832226771262e+03,
+      "cpu_time": 1.9806277876927809e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1967/33",
+      "iterations": 332942,
+      "real_time": 2.0912702692785820e+03,
+      "cpu_time": 2.0838824780291993e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1966/34",
+      "iterations": 337115,
+      "real_time": 2.0667399730108859e+03,
+      "cpu_time": 2.0597807869718108e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1965/35",
+      "iterations": 307070,
+      "real_time": 2.2724801445422981e+03,
+      "cpu_time": 2.2644608721138593e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1964/36",
+      "iterations": 319589,
+      "real_time": 2.1889951281314438e+03,
+      "cpu_time": 2.1811858355575418e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1963/37",
+      "iterations": 323741,
+      "real_time": 2.1709340182693913e+03,
+      "cpu_time": 2.1617712924838129e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1962/38",
+      "iterations": 301764,
+      "real_time": 2.3135818089162653e+03,
+      "cpu_time": 2.3047812197611233e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1961/39",
+      "iterations": 309309,
+      "real_time": 2.2605293379567183e+03,
+      "cpu_time": 2.2510337558881142e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "benchmark_merge<upper_bound_based_merge>/1960/40",
+      "iterations": 292004,
+      "real_time": 2.3603652861338946e+03,
+      "cpu_time": 2.3516492924754566e+03,
+      "time_unit": "ns"
+    }
+  ]
+}

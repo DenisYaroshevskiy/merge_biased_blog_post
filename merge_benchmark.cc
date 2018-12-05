@@ -12,9 +12,9 @@
 
 namespace {
 
-constexpr bool kOnlyLastElements = false;
+constexpr bool kOnlyLastElements = true;
 
-constexpr std::size_t kProblemSize = 2'000'000u;
+constexpr std::size_t kProblemSize = 2000u;
 constexpr std::size_t kMaxRhsSize = kOnlyLastElements ? 40 : kProblemSize;
 constexpr std::size_t kStep = kMaxRhsSize / 40;
 
@@ -162,4 +162,4 @@ void benchmark_merge(benchmark::State& state) {
   }
 }
 
-BENCHMARK_TEMPLATE(benchmark_merge, merge_v8)->Apply(set_benchmark_input_sizes);
+BENCHMARK_TEMPLATE(benchmark_merge, upper_bound_based_merge)->Apply(set_benchmark_input_sizes);
