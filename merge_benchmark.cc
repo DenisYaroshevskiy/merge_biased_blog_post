@@ -15,7 +15,7 @@ namespace {
 constexpr bool kOnlyLastElements = true;
 constexpr std::size_t kBigStep = 20;
 
-constexpr std::size_t kProblemSize = 2000u;
+constexpr std::size_t kProblemSize = 2'000'000u;
 constexpr std::size_t kStep = kOnlyLastElements ? 1 : kBigStep;
 constexpr std::size_t kMaxRhsSize =
     kOnlyLastElements ? kBigStep * 2 : kProblemSize;
@@ -141,6 +141,14 @@ struct merge_v8 {
   }
 };
 
+struct std_copy {
+  template <typename I1, typename I2, typename O>
+  O operator()(I1 f1, I1 l1, I2 f2, I2 l2, O o) {
+    o = std::copy(f1, l1, o);
+    return std::copy(f2, l2, o);
+  }
+};
+
 }  // namespace
 
 template <typename Merger>
@@ -157,5 +165,5 @@ void benchmark_merge(benchmark::State& state) {
   }
 }
 
-BENCHMARK_TEMPLATE(benchmark_merge, merge_v8)
+BENCHMARK_TEMPLATE(benchmark_merge, std_merge)
     ->Apply(set_benchmark_input_sizes);

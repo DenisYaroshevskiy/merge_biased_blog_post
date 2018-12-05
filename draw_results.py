@@ -71,6 +71,12 @@ def generateMapOfStyles():
         line = dict(width = 3, dash = 'solid', color = 'rgb(0, 0, 0)')
     )
 
+    styles['benchmark_merge<std_copy>'] = dict(
+        mode = 'lines',
+        name = 'copy',
+        line = dict(width = 3, dash = 'dot', color = 'rgb(150, 000, 100)')
+    )
+
     return styles
 
 class parsedBenchmark:
@@ -139,7 +145,7 @@ class runner:
         #    layout['title'] = 'Total range'
 
 
-        layout['xaxis'] = dict(title = 'distance(f, result)', dtick = maxRhsSize / 10)
+        layout['xaxis'] = dict(title = 'distance(f2, l2)', dtick = maxRhsSize / 10)
         layout['yaxis'] = dict(title = 'ns')
 
         self.layout = layout
