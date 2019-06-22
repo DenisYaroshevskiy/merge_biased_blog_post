@@ -243,6 +243,12 @@ TEST_CASE("merge_v8") {
   });
 }
 
+TEST_CASE("merge_v9") {
+  test_merge([](auto f1, auto l1, auto f2, auto l2, auto o) {
+    return srt::v9::merge(f1, l1, f2, l2, o, stability_less{});
+  });
+}
+
 TEST_CASE("result") {
   test_merge([](auto f1, auto l1, auto f2, auto l2, auto o) {
     return srt::merge_linear(f1, l1, f2, l2, o, stability_less{});

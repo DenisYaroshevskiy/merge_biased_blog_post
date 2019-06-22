@@ -12,7 +12,7 @@
 
 namespace {
 
-constexpr bool kOnlyLastElements = true;
+constexpr bool kOnlyLastElements = false;
 
 constexpr std::size_t kProblemSize = 2000u;
 constexpr std::size_t kMaxRhsSize = kOnlyLastElements ? 40 : kProblemSize;
@@ -139,6 +139,13 @@ struct merge_v8 {
   }
 };
 
+struct merge_v9 {
+  template <typename I1, typename I2, typename O>
+  O operator()(I1 f1, I1 l1, I2 f2, I2 l2, O o) {
+    return srt::v9::merge(f1, l1, f2, l2, o, std::less<>{});
+  }
+};
+
 struct std_copy {
   template <typename I1, typename I2, typename O>
   O operator()(I1 f1, I1 l1, I2 f2, I2 l2, O o) {
@@ -162,4 +169,4 @@ void benchmark_merge(benchmark::State& state) {
   }
 }
 
-BENCHMARK_TEMPLATE(benchmark_merge, upper_bound_based_merge)->Apply(set_benchmark_input_sizes);
+BENCHMARK_TEMPLATE(benchmark_merge, std_merge)->Apply(set_benchmark_input_sizes);

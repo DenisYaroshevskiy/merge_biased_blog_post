@@ -331,4 +331,42 @@ copyFirst:
 
 }  // namespace v8
 
+namespace v9 {
+
+template <typename I1, typename I2, typename O, typename P>
+constexpr O merge(I1 f1, I1 l1, I2 f2, I2 l2, O o, P p) {
+  bool firstIsEmpty = false;
+
+  if (f1 == l1) { firstIsEmpty = true; }
+  else if (f2 != l2) {
+      firstIsEmpty = [&]() mutable {
+        enum { takeFirst, takeSecond, takeFirstUnrolled } state = takeFirst;
+
+        while (true) {
+          switch (state) {
+            case takeSecond: {
+              *o++ = *f2++;  if (f2 == l2) { return false; }
+              [[fallthrough]];
+            }
+            case takeFirst: {
+              if (p(*f2, *f1)) { state = takeSecond; continue; }
+              *o++ = *f1++; if (f1 == l1) { return true; }
+              [[fallthrough]];
+            }
+            case takeFirstUnrolled: {
+              if (p(*f2, *f1)) { state = takeSecond; continue; }
+              *o++ = *f1++; if (f1 == l1) { return true; }
+              state = takeFirst; continue;
+            }
+          }
+        }
+      }();
+  }
+
+  if (firstIsEmpty) return std::copy(f2, l2, o);
+  return std::copy(f1, l1, o);
+}
+
+}  // namespace v9
+
 }  // namespace srt
